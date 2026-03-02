@@ -1,0 +1,16 @@
+Starting training for 15 epochs...
+Epoch 1: Accuracy = 43.21%
+Epoch 2: Accuracy = 50.99%
+Epoch 3: Accuracy = 53.51%
+Epoch 4: Accuracy = 60.07%
+Epoch 5: Accuracy = 60.47%
+Epoch 6: Accuracy = 63.85%
+Epoch 7: Accuracy = 64.68%
+Epoch 8: Accuracy = 69.63%
+Epoch 9: Accuracy = 69.52%
+Epoch 10: Accuracy = 72.09%
+Epoch 11: Accuracy = 71.33%
+Epoch 12: Accuracy = 74.46%
+Epoch 13: Accuracy = 72.46%
+Epoch 14: Accuracy = 71.18%
+Epoch 15: Accuracy = 74.39%

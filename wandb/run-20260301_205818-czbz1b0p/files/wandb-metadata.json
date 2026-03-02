@@ -1,0 +1,37 @@
+{
+  "os": "macOS-15.5-arm64-arm-64bit",
+  "python": "CPython 3.12.1",
+  "startedAt": "2026-03-02T02:58:18.566873Z",
+  "program": "/Users/swabhiman/Desktop/Fifth Sem/AI/Projects/Project1/asl-sign-detection/src/mlp_training.py",
+  "codePath": "src/mlp_training.py",
+  "codePathLocal": "src/mlp_training.py",
+  "git": {
+    "remote": "https://github.com/prabeen-creator/asl-sign-detection",
+    "commit": "fba9f25967d940dbf35725cdad75b2160a58bc44"
+  },
+  "email": "paudel.swa@gmail.com",
+  "root": "/Users/swabhiman/Desktop/Fifth Sem/AI/Projects/Project1/asl-sign-detection",
+  "host": "Swabhimans-MacBook-Air.local",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "245107195904",
+      "used": "223710150656"
+    }
+  },
+  "memory": {
+    "total": "8589934592"
+  },
+  "apple": {
+    "name": "Apple M1",
+    "ecpuCores": 4,
+    "pcpuCores": 4,
+    "gpuCores": 7,
+    "memoryGb": 8,
+    "swapTotalBytes": "9663676416",
+    "ramTotalBytes": "8589934592"
+  },
+  "writerId": "srebullulergcehqmrinsn4smbzxc83s"
+}

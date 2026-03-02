@@ -1,36 +1,31 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import pandas as pd
 from sklearn import svm
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
-import joblib
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
 
-# load your data
-# expected format: [label, x0, y0, x1, y1, .... x20, y20]
-df = pd.read_csv('asl_landmarks.csv')
+# 1. Load the MNIST data
+train_df = pd.read_csv('sign_mnist_train.csv')
+test_df = pd.read_csv('sign_mnist_test.csv')
 
-# 2. split into features (X) and labels (y)
-X = df.iloc[:,1:].values # Landmark coordinates
-y = df.iloc[:, 0].values # the letter labels
+# 2. Separate features and labels
+X_train = train_df.drop('label', axis=1).values / 255.0  # Normalize pixels
+y_train = train_df['label'].values
+X_test = test_df.drop('label', axis=1).values / 255.0
+y_test = test_df['label'].values
 
-# 3. split into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.2, random_state = 42)
-
-# 4. initialize and train the svm
-# we use 'RBF' kernel for non-linear hand shapes and 'c=1.0' for regularization
-clf = svm.SVC(kernel='rbf', gamma = 'scale', C = 1.0, probability = True)
+# 3. Train SVM (The Control)
+print("Training SVM Baseline...")
+clf = svm.SVC(kernel='rbf', C=1.0)
 clf.fit(X_train, y_train)
 
-# 5. evaluate
+# 4. Evaluate and Generate Confusion Matrix (Week 1 Deliverable)
 y_pred = clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")
-print(classification_report(y_test, y_pred))
 
-# 6. save the model for later use in cpp
-joblib.dump(clf, 'asl_svm_model.pkl')
-
+cm = confusion_matrix(y_test, y_pred)
+fig, ax = plt.subplots(figsize=(12, 12))
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot(cmap='Blues', ax=ax)
+plt.title("Confusion Matrix: SVM Baseline (MNIST)")
+plt.savefig('svm_confusion_matrix.png')
+print("Saved svm_confusion_matrix.png")
