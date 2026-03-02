@@ -5,3 +5,4 @@ This project uses the ASL Alphabet dataset from Kaggle.
 2. Download the dataset from the Kaggle link above.
 3. Extract the images and ensure the folder is named `ASL_Training_images` in the root directory.
 4. The `.gitignore` is already set up to ignore this folder so you won't accidentally push it.
+5. The trained model is located in the `models/` directory.
