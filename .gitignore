@@ -1,20 +1,19 @@
-# Datasets
-ASL_Training_images/
-data/
-
-# Models
-models/
-
-# Virtual environment
-ml-env/
-venv/
-
-# CSV
-*.csv
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# Python cache
+# Standard Python ignores
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Large Datasets (from your previous steps)
+*.csv
+archive/
+archive.zip
+
+# Mac System Files (The .DS_Store you saw)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Weights & Biases (The wandb/ folders in your commit)
+wandb/

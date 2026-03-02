@@ -1,6 +1,0 @@
-Starting Experiment 2: Hidden Size 512
-Epoch 5: Accuracy = 70.61%
-Epoch 10: Accuracy = 80.45%
-Epoch 15: Accuracy = 73.98%
-Epoch 20: Accuracy = 80.48%
-Model saved as asl_mlp_model_v2.pth
